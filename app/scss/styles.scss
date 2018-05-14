@@ -1,0 +1,200 @@
+@import '_shortcuts';
+@import '_variables';
+@import '_helpers';
+
+
+/* =SITE */
+body{
+  margin: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica", "Arial" , sans-serif;
+}
+
+.navbar{
+  
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  
+  width: 100%;
+
+  background-color: #fff;
+  text-align: center;
+} 
+
+.brand{
+  
+  display: inline-block;
+  
+  height: 48px;
+  width: 142px;
+
+  margin: 10px auto;
+
+}
+
+.app{
+
+  &__container{
+
+    display: flex;
+    align-items: center;
+
+    margin-top: 72px;
+    padding: 275px 0;
+
+    background-color: $containerColor; 
+    box-shadow: 0px 0px 1px 1px rgba(51,51,51,0.1) inset;
+  }
+}
+
+@media #{$tiny}{
+  .app{
+    &__container{
+      flex-direction: column;
+      padding: 0px 35px 35px 35px;
+    }
+  }
+}
+
+@media #{$large} {
+  .app{
+    &__container{
+      margin: 72px 20px 0;
+    }
+  }
+}
+
+@media #{$extralarge} {
+  .app{
+    &__container{
+      margin: 72px 30px 0;
+    }
+  }
+}
+
+.card{
+
+  margin: 35px 35px 0px;  
+
+  background-color: $colorWhite;
+  border-radius: 4px;
+  box-shadow: 0px 0px 1px 1px $cardBoxShadow;
+  
+  >header{
+
+    padding: 17px 0;
+
+    border-bottom: 1px solid $divider;
+
+    color: $colorHeader;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
+
+  }
+
+  &__body{
+
+      >.title{
+        
+        margin: 30px 0px;
+        
+        font-size: 72px;
+        font-weight: 100;
+        text-align: center;
+      }
+  }
+
+  &__info{
+    display: flex;
+  }
+
+  &__information{
+
+    flex-grow: 1;
+
+    margin-bottom: 10px;
+    text-align: center;
+
+    >.title{
+      margin: 10px 0;
+
+      color: #ccc;
+      font-size: 12px;
+      font-weight: lighter;
+      text-transform: uppercase; 
+    }
+
+    >.value{
+
+      margin-bottom: 10px;
+      color: #8C939A;
+      font-size: 16px;
+
+    }
+  }
+
+  &__time{
+    >.title{
+      margin: 0px;
+
+      padding: 5px 0 15px;
+      
+      color: #ccc;
+      text-align: center;
+    }
+  }
+
+  &__updated{
+    margin: 0px;
+  }
+
+  >footer{
+    background-color: $footerColor;
+  }
+}
+
+@media #{$tiny}{
+  .card{
+
+    width: 100%;
+
+    flex-grow: 1;
+    margin: 35px 0 0 0;
+  }
+}
+
+@media #{$desktop}{
+  .card{
+
+    flex-grow: 1;
+
+    &:first-child{
+      margin-left: 50px;
+    }
+
+    &:last-child{
+      margin-right: 50px;
+    }
+    
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+
+}
+
+
+/* =MISC */
+.fontBlue{
+  color: $fontBlue;
+}
+
+.fontRed{
+  color: $fontRed;
+}
+
+.fontOrange{
+  color: $fontOrange;
+}
