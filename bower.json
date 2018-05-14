@@ -1,0 +1,25 @@
+{
+  "name": "contazul",
+  "description": "Conta Azul teste prático",
+  "main": "index.js",
+  "authors": [
+    "michael nakashima"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Angular",
+    "host",
+    "conta azul",
+    "code",
+    "test"
+  ],
+  "homepage": "https://github.com/mhnakashima/contazul",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
